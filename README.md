@@ -1,5 +1,5 @@
 # SoulissApp for ios
-An iOS app Arduino based Smart Home and IoT
+An iOS app for Arduino based Smart Home and IoT
 
 
 
