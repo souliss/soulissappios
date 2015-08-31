@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DE6F78019164D5B8AD25FEC /* Pods_soulissappios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 988E42B1CB4707B65F82AAA6 /* Pods_soulissappios.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		372701691B9448D400574985 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372701681B9448D400574985 /* AppDelegate.swift */; };
 		3727016C1B9448D400574985 /* soulissappios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3727016A1B9448D400574985 /* soulissappios.xcdatamodeld */; };
 		3727016E1B9448D400574985 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3727016D1B9448D400574985 /* ViewController.swift */; };
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		179220E7DD3DA95F2BE4A6AC /* Pods-soulissappios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-soulissappios.release.xcconfig"; path = "Pods/Target Support Files/Pods-soulissappios/Pods-soulissappios.release.xcconfig"; sourceTree = "<group>"; };
+		1B7C06ABC4A2F1620C4A2312 /* Pods-soulissappios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-soulissappios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-soulissappios/Pods-soulissappios.debug.xcconfig"; sourceTree = "<group>"; };
 		372701631B9448D400574985 /* soulissappios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = soulissappios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		372701671B9448D400574985 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		372701681B9448D400574985 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +41,7 @@
 		3727017B1B9448D400574985 /* soulissappiosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = soulissappiosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		372701801B9448D400574985 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		372701811B9448D400574985 /* soulissappiosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = soulissappiosTests.swift; sourceTree = "<group>"; };
+		988E42B1CB4707B65F82AAA6 /* Pods_soulissappios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_soulissappios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DE6F78019164D5B8AD25FEC /* Pods_soulissappios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +69,8 @@
 				372701651B9448D400574985 /* soulissappios */,
 				3727017E1B9448D400574985 /* soulissappiosTests */,
 				372701641B9448D400574985 /* Products */,
+				5DE2F7668C76928A43B8B28F /* Pods */,
+				EDCC6A1A509089DFE5BD031F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,6 +122,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		5DE2F7668C76928A43B8B28F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1B7C06ABC4A2F1620C4A2312 /* Pods-soulissappios.debug.xcconfig */,
+				179220E7DD3DA95F2BE4A6AC /* Pods-soulissappios.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EDCC6A1A509089DFE5BD031F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				988E42B1CB4707B65F82AAA6 /* Pods_soulissappios.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,9 +146,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 372701851B9448D400574985 /* Build configuration list for PBXNativeTarget "soulissappios" */;
 			buildPhases = (
+				3E2BB0C0E739E85B30CC7221 /* Check Pods Manifest.lock */,
 				3727015F1B9448D400574985 /* Sources */,
 				372701601B9448D400574985 /* Frameworks */,
 				372701611B9448D400574985 /* Resources */,
+				6ED77F861447F26CD1C368C4 /* Embed Pods Frameworks */,
+				0BA817FC32C1965205842C31 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -209,6 +236,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0BA817FC32C1965205842C31 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-soulissappios/Pods-soulissappios-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E2BB0C0E739E85B30CC7221 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6ED77F861447F26CD1C368C4 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-soulissappios/Pods-soulissappios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3727015F1B9448D400574985 /* Sources */ = {
@@ -344,6 +419,7 @@
 		};
 		372701861B9448D400574985 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B7C06ABC4A2F1620C4A2312 /* Pods-soulissappios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = soulissappios/Info.plist;
@@ -354,6 +430,7 @@
 		};
 		372701871B9448D400574985 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 179220E7DD3DA95F2BE4A6AC /* Pods-soulissappios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = soulissappios/Info.plist;
@@ -415,6 +492,7 @@
 				372701871B9448D400574985 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		372701881B9448D400574985 /* Build configuration list for PBXNativeTarget "soulissappiosTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +501,7 @@
 				3727018A1B9448D400574985 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

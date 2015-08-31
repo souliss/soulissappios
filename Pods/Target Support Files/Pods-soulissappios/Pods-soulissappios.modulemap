@@ -1,0 +1,6 @@
+framework module Pods_soulissappios {
+  umbrella header "Pods-soulissappios-umbrella.h"
+
+  export *
+  module * { export * }
+}
