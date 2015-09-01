@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>CocoaAsyncSocket.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-soulissappios.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,7 +22,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>9BA1ABF4660C1487D58DCE44F895F055</key>
+		<key>505192D97A111921838977CB8CF74B6F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8D08D2E716360A892FE4A9E11CF5D190</key>
 		<dict>
 			<key>primary</key>
 			<true/>

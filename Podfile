@@ -3,7 +3,8 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'soulissappios' do
-   pod 'SwiftyJSON', '~> 2.2.0'   
+   pod 'SwiftyJSON', '~> 2.2.0'
+   pod 'CocoaAsyncSocket'   
 end
 
 target 'soulissappiosTests' do

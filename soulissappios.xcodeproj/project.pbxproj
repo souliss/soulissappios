@@ -10,11 +10,13 @@
 		0DE6F78019164D5B8AD25FEC /* Pods_soulissappios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 988E42B1CB4707B65F82AAA6 /* Pods_soulissappios.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		372701691B9448D400574985 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372701681B9448D400574985 /* AppDelegate.swift */; };
 		3727016C1B9448D400574985 /* soulissappios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3727016A1B9448D400574985 /* soulissappios.xcdatamodeld */; };
-		3727016E1B9448D400574985 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3727016D1B9448D400574985 /* ViewController.swift */; };
+		3727016E1B9448D400574985 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3727016D1B9448D400574985 /* MainViewController.swift */; };
 		372701711B9448D400574985 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3727016F1B9448D400574985 /* Main.storyboard */; };
 		372701731B9448D400574985 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 372701721B9448D400574985 /* Images.xcassets */; };
 		372701761B9448D400574985 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 372701741B9448D400574985 /* LaunchScreen.xib */; };
 		372701821B9448D400574985 /* soulissappiosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372701811B9448D400574985 /* soulissappiosTests.swift */; };
+		37E2D7A71B95885700782D4D /* Socketer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E2D7A61B95885700782D4D /* Socketer.swift */; };
+		37E2D7AB1B95A16C00782D4D /* SocketerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E2D7AA1B95A16C00782D4D /* SocketerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,13 +36,15 @@
 		372701671B9448D400574985 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		372701681B9448D400574985 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3727016B1B9448D400574985 /* soulissappios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = soulissappios.xcdatamodel; sourceTree = "<group>"; };
-		3727016D1B9448D400574985 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3727016D1B9448D400574985 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		372701701B9448D400574985 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		372701721B9448D400574985 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		372701751B9448D400574985 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		3727017B1B9448D400574985 /* soulissappiosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = soulissappiosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		372701801B9448D400574985 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		372701811B9448D400574985 /* soulissappiosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = soulissappiosTests.swift; sourceTree = "<group>"; };
+		37E2D7A61B95885700782D4D /* Socketer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Socketer.swift; path = Net/Socketer.swift; sourceTree = "<group>"; };
+		37E2D7AA1B95A16C00782D4D /* SocketerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SocketerDelegate.swift; path = Net/SocketerDelegate.swift; sourceTree = "<group>"; };
 		988E42B1CB4707B65F82AAA6 /* Pods_soulissappios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_soulissappios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -86,8 +90,10 @@
 		372701651B9448D400574985 /* soulissappios */ = {
 			isa = PBXGroup;
 			children = (
+				37E2D7A51B95883A00782D4D /* Net */,
+				37E2D7A21B95872200782D4D /* Helpers */,
 				372701681B9448D400574985 /* AppDelegate.swift */,
-				3727016D1B9448D400574985 /* ViewController.swift */,
+				3727016D1B9448D400574985 /* MainViewController.swift */,
 				3727016F1B9448D400574985 /* Main.storyboard */,
 				372701721B9448D400574985 /* Images.xcassets */,
 				372701741B9448D400574985 /* LaunchScreen.xib */,
@@ -120,6 +126,22 @@
 				372701801B9448D400574985 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		37E2D7A21B95872200782D4D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		37E2D7A51B95883A00782D4D /* Net */ = {
+			isa = PBXGroup;
+			children = (
+				37E2D7A61B95885700782D4D /* Socketer.swift */,
+				37E2D7AA1B95A16C00782D4D /* SocketerDelegate.swift */,
+			);
+			name = Net;
 			sourceTree = "<group>";
 		};
 		5DE2F7668C76928A43B8B28F /* Pods */ = {
@@ -290,7 +312,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3727016E1B9448D400574985 /* ViewController.swift in Sources */,
+				3727016E1B9448D400574985 /* MainViewController.swift in Sources */,
+				37E2D7A71B95885700782D4D /* Socketer.swift in Sources */,
+				37E2D7AB1B95A16C00782D4D /* SocketerDelegate.swift in Sources */,
 				3727016C1B9448D400574985 /* soulissappios.xcdatamodeld in Sources */,
 				372701691B9448D400574985 /* AppDelegate.swift in Sources */,
 			);

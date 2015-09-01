@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="soulissappios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,66 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBe-Ec-9OK">
+                                <rect key="frame" x="231" y="285" width="138" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="138" id="5gt-Dd-YLK"/>
+                                </constraints>
+                                <state key="normal" title="Ping">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G9w-TO-7I7"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="IP Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="45P-dV-LBH">
+                                <rect key="frame" x="180" y="208" width="241" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="241" id="zD6-mB-9sM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qWR-5c-3b7">
+                                <rect key="frame" x="16" y="363" width="568" height="237"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="soulisslogo" translatesAutoresizingMaskIntoConstraints="NO" id="aLu-eF-MQC">
+                                <rect key="frame" x="180" y="54" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="qCh-8L-j9b"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qWR-5c-3b7" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="49s-O3-hZJ"/>
+                            <constraint firstItem="aLu-eF-MQC" firstAttribute="centerX" secondItem="45P-dV-LBH" secondAttribute="centerX" id="FWa-gT-YF6"/>
+                            <constraint firstItem="aLu-eF-MQC" firstAttribute="leading" secondItem="45P-dV-LBH" secondAttribute="leading" id="JJJ-zu-QS5"/>
+                            <constraint firstItem="qWR-5c-3b7" firstAttribute="top" secondItem="WBe-Ec-9OK" secondAttribute="bottom" constant="48" id="Kse-37-3PN"/>
+                            <constraint firstItem="qWR-5c-3b7" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="PCw-f1-YiA"/>
+                            <constraint firstItem="WBe-Ec-9OK" firstAttribute="centerX" secondItem="qWR-5c-3b7" secondAttribute="centerX" id="TkH-X2-uT2"/>
+                            <constraint firstItem="45P-dV-LBH" firstAttribute="top" secondItem="aLu-eF-MQC" secondAttribute="bottom" constant="26" id="cMU-BN-Jdy"/>
+                            <constraint firstItem="45P-dV-LBH" firstAttribute="centerX" secondItem="WBe-Ec-9OK" secondAttribute="centerX" id="j7V-d5-YU8"/>
+                            <constraint firstItem="WBe-Ec-9OK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jqo-Mq-lMa"/>
+                            <constraint firstItem="qWR-5c-3b7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="kaD-iS-a2h"/>
+                            <constraint firstItem="WBe-Ec-9OK" firstAttribute="top" secondItem="45P-dV-LBH" secondAttribute="bottom" constant="47" id="pzm-eW-9yk"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ipAddressTextField" destination="45P-dV-LBH" id="02i-jR-fLD"/>
+                        <outlet property="responseTextView" destination="qWR-5c-3b7" id="pyw-Qb-TzP"/>
+                        <outlet property="testBtn" destination="WBe-Ec-9OK" id="nep-yv-opJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="soulisslogo" width="96" height="96"/>
+    </resources>
 </document>
