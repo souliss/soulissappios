@@ -38,6 +38,7 @@ The project follows the best practices of developing an iOS project.
 5 Main Groups are present in the project:
 
 1. Models
+   Describes Nodes and [Typicals](https://github.com/souliss/souliss/wiki/Typicals) abstracting Souliss hardware layers. A souliss deployment is made of N nodes, each containing a list of devices (called typicals at low level). The model is exactly the same of [SoulissApp](https://github.com/souliss/soulissapp/tree/master/SoulissApp/src/main/java/it/angelic/soulissclient/model)
 2. Net
 3. Helpers
 4. Stores
