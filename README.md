@@ -6,7 +6,7 @@ An iOS app for Arduino based Smart Home and IoT, **the app is in it's early stag
 
 
 ## Overview
-The app is written in Swift 1.2. Xcode: Version 6.4. Platform Target: iOS 8.0.
+The app is written in Swift 2.0. Xcode: Version 7.0. Platform Target: iOS 8.0.
 
 ## Getting Started
 

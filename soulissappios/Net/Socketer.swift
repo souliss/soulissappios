@@ -25,15 +25,19 @@ class Socketer: NSObject, GCDAsyncUdpSocketDelegate {
     }
     
     func setupConnection(){
-        var error : NSError?
         socket = GCDAsyncUdpSocket(delegate: self, delegateQueue: dispatch_get_main_queue())
-        socket.bindToPort(PORT, error: &error)
-        socket.connectToHost(IP, onPort: PORT, error: &error)
-        socket.beginReceiving(&error)
+        do {
+            try socket.bindToPort(PORT)
+            try socket.connectToHost(IP, onPort: PORT)
+            try socket.beginReceiving()
+        } catch {
+            
+        }
+        
     }
     
     func udpSocket(sock: GCDAsyncUdpSocket!, didReceiveData data: NSData!, fromAddress address: NSData!,      withFilterContext filterContext: AnyObject!) {
-        println("incoming message: \(data)");
+        print("incoming message: \(data)");
         socketerDelegate.didReceiveData(didReceiveData: data)
     }
     
@@ -42,21 +46,21 @@ class Socketer: NSObject, GCDAsyncUdpSocketDelegate {
     }
     
     func udpSocket(sock: GCDAsyncUdpSocket!, didConnectToAddress address: NSData!) {
-        println("didConnectToAddress");
+        print("didConnectToAddress");
         socketerDelegate.didConnect()
     }
     
     func udpSocket(sock: GCDAsyncUdpSocket!, didNotConnect error: NSError!) {
-        println("didNotConnect \(error)")
+        print("didNotConnect \(error)")
     }
     
     func udpSocket(sock: GCDAsyncUdpSocket!, didSendDataWithTag tag: Int) {
-        println("didSendDataWithTag")
+        print("didSendDataWithTag")
         socketerDelegate.didSend()
     }
     
     func udpSocket(sock: GCDAsyncUdpSocket!, didNotSendDataWithTag tag: Int, dueToError error: NSError!) {
-        println("didNotSendDataWithTag")
+        print("didNotSendDataWithTag")
         socketerDelegate.didNotSend()
     }
 }
