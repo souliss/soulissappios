@@ -43,6 +43,8 @@ class Socketer: NSObject, GCDAsyncUdpSocketDelegate {
     
     func send(data:NSData){
         socket.sendData(data, withTimeout: 2, tag: 0)
+        print("localAddress is: \(socket.localAddress())")
+        print("localHost is: \(socket.localHost())")
     }
     
     func udpSocket(sock: GCDAsyncUdpSocket!, didConnectToAddress address: NSData!) {

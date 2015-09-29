@@ -27,11 +27,20 @@ class MainViewController: UIViewController, SocketerDelegate {
     }
 
     @IBAction func sendAction(sender: AnyObject) {
-        let endMarker = NSData(bytes: [0xc, 0xb, 0x17 ,0xb1, 0x0, 0x6, 0x5, 0x8, 0xb1, 0x0, 0x0, 0x0] as [UInt8], length: 12)
+        
         
         if let ipAddressText = ipAddressTextField.text {
-            socketer = Socketer(socketerDelegate: self, IP: ipAddressText)
-            socketer.send(endMarker)
+            let net = NetUtils()
+            let ip = net.splitIPv4(ipAddressText)
+            let endMarker = NSData(bytes: [0xc, 0xb, 0x17 ,ip!.fourth, ip!.third, 0x6, 0x5, 0x8, 0xb1, 0x0, 0x0, 0x0] as [UInt8], length: 12)
+            if let sock = socketer {
+                
+                sock.send(endMarker)
+            } else  {
+                socketer = Socketer(socketerDelegate: self, IP: ipAddressText)
+                socketer.send(endMarker)
+            }
+
             self.view.endEditing(true)
             
         } else {

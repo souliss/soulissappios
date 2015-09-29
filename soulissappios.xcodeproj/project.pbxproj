@@ -17,6 +17,7 @@
 		372701821B9448D400574985 /* soulissappiosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372701811B9448D400574985 /* soulissappiosTests.swift */; };
 		37E2D7A71B95885700782D4D /* Socketer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E2D7A61B95885700782D4D /* Socketer.swift */; };
 		37E2D7AB1B95A16C00782D4D /* SocketerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E2D7AA1B95A16C00782D4D /* SocketerDelegate.swift */; };
+		37EBD2291BBA8A9B00984F62 /* NetUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD2281BBA8A9B00984F62 /* NetUtils.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		372701811B9448D400574985 /* soulissappiosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = soulissappiosTests.swift; sourceTree = "<group>"; };
 		37E2D7A61B95885700782D4D /* Socketer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Socketer.swift; path = Net/Socketer.swift; sourceTree = "<group>"; };
 		37E2D7AA1B95A16C00782D4D /* SocketerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SocketerDelegate.swift; path = Net/SocketerDelegate.swift; sourceTree = "<group>"; };
+		37EBD2281BBA8A9B00984F62 /* NetUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetUtils.swift; path = Net/NetUtils.swift; sourceTree = "<group>"; };
 		988E42B1CB4707B65F82AAA6 /* Pods_soulissappios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_soulissappios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -140,6 +142,7 @@
 			children = (
 				37E2D7A61B95885700782D4D /* Socketer.swift */,
 				37E2D7AA1B95A16C00782D4D /* SocketerDelegate.swift */,
+				37EBD2281BBA8A9B00984F62 /* NetUtils.swift */,
 			);
 			name = Net;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3727016E1B9448D400574985 /* MainViewController.swift in Sources */,
+				37EBD2291BBA8A9B00984F62 /* NetUtils.swift in Sources */,
 				37E2D7A71B95885700782D4D /* Socketer.swift in Sources */,
 				37E2D7AB1B95A16C00782D4D /* SocketerDelegate.swift in Sources */,
 				3727016C1B9448D400574985 /* soulissappios.xcdatamodeld in Sources */,
